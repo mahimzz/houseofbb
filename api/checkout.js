@@ -42,7 +42,7 @@ export async function POST(request) {
       shipping_address_collection: { allowed_countries: ['GB'] },
       shipping_options: [{
         shipping_rate_data: {
-          display_name: 'Tracked UK delivery',
+          display_name: 'Free tracked UK delivery',
           type: 'fixed_amount',
           fixed_amount: { amount: shipping, currency: 'gbp' },
         },
