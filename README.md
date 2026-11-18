@@ -69,7 +69,7 @@ Customer clicks "Buy now"
 ## Before launch: fill in the placeholders
 
 Search the `public` folder for `[`. You'll find:
-- `£[PRICE]` on the product page (must match `PRICE_PENCE`)
+- the product page price, now £20 (must match `PRICE_PENCE=2000`)
 - fabric, fit and delivery days
 - the About us story: `[YEAR]`, `[FOUNDER NAME]`, `[CITY]`, `[WHAT BB STANDS FOR]`. The story is a draft, so make it true to you.
 - `[YOUR EMAIL]`, the size chart (use Printful's chart for your tee) and delivery times
