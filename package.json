@@ -1,0 +1,16 @@
+{
+  "name": "house-of-bb",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "House of BB storefront: static pages, Stripe Checkout and Printful fulfilment on Vercel",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "stripe": "^17.0.0"
+  }
+}

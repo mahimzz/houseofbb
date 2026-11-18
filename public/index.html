@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>À la Turca Tee — House of BB</title>
+<meta name="description" content="À la Turca: a premium white tee with cobalt and turquoise tilework inspired by the Iznik ceramics of Istanbul. By House of BB.">
+<meta property="og:title" content="À la Turca Tee — House of BB">
+<meta property="og:image" content="/images/a-la-turca.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="announce">PREMIUM COTTON · TRACKED UK DELIVERY</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/">House of BB</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/" aria-current="page">Shop</a>
+      <a href="/about">About us</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="product">
+    <div class="product-image">
+      <img src="/images/a-la-turca.jpg" width="1290" height="1527" alt="White tee printed with 'À la Turca, avec allure' above a blue Iznik-style tile panel">
+    </div>
+
+    <div class="product-info">
+      <p class="eyebrow">The Istanbul Collection</p>
+      <div>
+        <h1 class="product-title">À la Turca</h1>
+        <p class="product-sub">avec allure</p>
+      </div>
+      <!-- Keep this in step with PRICE_PENCE in your environment settings -->
+      <p class="price">£[PRICE]</p>
+      <p class="lede">Cobalt and turquoise tilework, drawn from the Iznik ceramics of Ottoman Istanbul, set beneath a navy serif title on a premium white tee.</p>
+
+      <form id="buy-form" class="buy-form" novalidate>
+        <fieldset>
+          <legend>SIZE</legend>
+          <div class="sizes">
+            <label class="size-option"><input type="radio" name="size" value="S"><span>S</span></label>
+            <label class="size-option"><input type="radio" name="size" value="M" checked><span>M</span></label>
+            <label class="size-option"><input type="radio" name="size" value="L"><span>L</span></label>
+            <label class="size-option"><input type="radio" name="size" value="XL"><span>XL</span></label>
+            <label class="size-option"><input type="radio" name="size" value="2XL"><span>2XL</span></label>
+          </div>
+          <p style="margin:12px 0 0;font-size:14px"><a href="/shipping#size-guide" style="text-decoration:underline">Size guide</a></p>
+        </fieldset>
+
+        <div class="buy" style="margin-top:28px">
+          <button id="buy-button" class="btn" type="submit">Buy now</button>
+          <p id="form-msg" class="form-msg" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="specs">
+        <div><p class="label">Fabric</p><p class="muted">[FABRIC, e.g. heavyweight cotton]</p></div>
+        <div><p class="label">Fit</p><p class="muted">[FIT, e.g. relaxed unisex]</p></div>
+        <div><p class="label">Delivery</p><p class="muted">UK, [X] working days</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="tile-band" aria-hidden="true"></div>
+
+<section class="band">
+  <div class="wrap section">
+    <div class="section-head">
+      <h2>Inspired by Türkiye. Made to last.</h2>
+      <p>Every House of BB design begins with the patterns, colours and craft of Turkey, reworked into pieces you'll reach for again and again.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><p class="num">I</p><h3>Premium cotton</h3><p>A soft, substantial tee that holds its shape, wash after wash.</p></div>
+      <div class="pillar"><p class="num">II</p><h3>Rich, true colour</h3><p>Deep cobalts and bright turquoise, printed in fine detail.</p></div>
+      <div class="pillar"><p class="num">III</p><h3>Rooted in heritage</h3><p>Each design draws on centuries of Turkish tile and textile art.</p></div>
+    </div>
+    <p class="center" style="margin-top:48px"><a href="/about" style="text-decoration:underline">Read our story</a></p>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h2>Be first to the next design</h2>
+  <!-- Replace action with your email provider's form URL (e.g. Mailchimp, Kit, Klaviyo) -->
+  <form action="[NEWSLETTER_FORM_URL]" method="post">
+    <label for="email" class="sr-only">Email address</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+    <button class="btn" type="submit">Sign up</button>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> House of BB</span>
+    <nav aria-label="Footer">
+      <a href="/about">About us</a>
+      <a href="/shipping">Shipping &amp; returns</a>
+      <a href="/shipping#size-guide">Size guide</a>
+      <a href="mailto:[YOUR EMAIL]">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
