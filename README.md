@@ -79,10 +79,10 @@ You'll also want a **privacy policy** and **terms** page before selling. The sit
 
 ## Limited drops
 
-Each design sells a set number of pieces (default 50), then the site switches to **Sold out** automatically.
+Each design sells a set number of pieces (default 100), then the site switches to **Sold out** automatically.
 
-- **How it counts:** straight from Stripe. Paid orders count as sold. Someone partway through checkout holds their tee for 30 minutes, so the 50 can't be oversold.
-- **What visitors see:** a "Limited to 50 pieces" badge. "Only X of 50 left" appears once 15 or fewer remain. At zero, the button becomes **Sold out** and points people to the email sign-up.
+- **How it counts:** straight from Stripe. Paid orders count as sold. Someone partway through checkout holds their tee for 30 minutes, so the 100 can't be oversold.
+- **What visitors see:** a "Limited to 100 pieces" badge. "Only X of 100 left" appears once 20 or fewer remain. At zero, the button becomes **Sold out** and points people to the email sign-up.
 - **Settings in Vercel:** `DROP_LIMIT` (pieces), `DROP_START` (your launch date, so test orders don't count), and optionally `DROP_ENDS` to close the drop at a date and time, e.g. `2026-12-14T23:59:00Z`.
 - **Launching the next drop:** change `DROP_ID` (e.g. `drop-02`) so the count restarts, update `DROP_START`, then swap the product details. Ask Claude to set up the new design.
 - **Keep it honest:** once a drop sells out, don't reprint that design. The site promises each one is made once.

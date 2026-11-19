@@ -44,7 +44,7 @@ button { font-family: inherit; cursor: pointer; }
 .product { padding: 64px 0 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 72px; align-items: start; }
 .product-image { background: var(--cream); border-radius: 4px; padding: 24px; }
 .gallery { display: flex; flex-direction: column; gap: 14px; }
-.gallery .product-image img { width: 100%; aspect-ratio: 1290 / 1527; object-fit: contain; background: #fff; }
+.gallery .product-image img { width: 100%; aspect-ratio: 1600 / 1713; object-fit: contain; background: #fff; }
 .thumbs { display: flex; gap: 12px; }
 .thumb { display: flex; flex-direction: column; gap: 6px; align-items: center; width: 104px; padding: 6px; background: var(--cream); border: 1px solid transparent; border-radius: 4px; color: var(--navy); font-size: 13px; }
 .thumb img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 2px; }
@@ -95,6 +95,13 @@ legend { font-size: 14px; font-weight: 600; letter-spacing: .08em; margin-bottom
 .pillar h3.serif { font-size: 26px; }
 .pillar p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-soft); }
 .center { text-align: center; }
+
+/* History (product page) */
+.history { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 72px; align-items: center; }
+.history-image { background: var(--cream); border-radius: 4px; padding: 24px; }
+.history-text { display: flex; flex-direction: column; gap: 20px; }
+.history-text p:not(.eyebrow) { margin: 0; font-size: 18px; line-height: 1.7; color: #2C3F66; }
+.history-text .h2 { margin: 0; }
 
 /* Newsletter */
 .newsletter { max-width: 720px; margin: 0 auto; padding: 80px 32px; text-align: center; display: flex; flex-direction: column; gap: 20px; }

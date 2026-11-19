@@ -7,7 +7,7 @@ import Stripe from 'stripe';
 
 export const DROP = {
   id: process.env.DROP_ID || 'drop-01',
-  limit: parseInt(process.env.DROP_LIMIT || '50', 10),
+  limit: parseInt(process.env.DROP_LIMIT || '100', 10),
   // Only orders from this date onwards count towards the drop (ISO date, e.g. 2026-12-01).
   start: process.env.DROP_START ? Math.floor(new Date(process.env.DROP_START).getTime() / 1000) : 0,
   // Optional closing date/time (ISO, e.g. 2026-12-14T23:59:00Z). Leave empty for no deadline.

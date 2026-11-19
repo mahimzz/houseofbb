@@ -14,7 +14,7 @@ document.querySelectorAll('.thumb').forEach((thumb) => {
 });
 
 // Show "X left" only once stock is this low, so a slow start doesn't show a big unsold number.
-const SHOW_REMAINING_AT = 15;
+const SHOW_REMAINING_AT = 20;
 
 const form = document.getElementById('buy-form');
 if (form) {
