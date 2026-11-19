@@ -1,6 +1,18 @@
 // House of BB: limited drop stock display and checkout.
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Photo gallery: switch the main image between the tee and the close-up.
+const mainImage = document.getElementById('main-image');
+document.querySelectorAll('.thumb').forEach((thumb) => {
+  thumb.addEventListener('click', () => {
+    mainImage.src = thumb.dataset.src;
+    mainImage.alt = thumb.dataset.alt;
+    mainImage.width = thumb.dataset.w;
+    mainImage.height = thumb.dataset.h;
+    document.querySelectorAll('.thumb').forEach((t) => t.setAttribute('aria-pressed', String(t === thumb)));
+  });
+});
+
 // Show "X left" only once stock is this low, so a slow start doesn't show a big unsold number.
 const SHOW_REMAINING_AT = 15;
 

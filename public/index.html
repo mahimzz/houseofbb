@@ -28,8 +28,19 @@
 
 <main class="wrap">
   <section class="product">
-    <div class="product-image">
-      <img src="/images/a-la-turca.jpg" width="1290" height="1527" alt="White tee printed with 'À la Turca, avec allure' above a blue Iznik-style tile panel">
+    <div class="gallery">
+      <div class="product-image">
+        <img id="main-image" src="/images/a-la-turca.jpg" width="1290" height="1527" alt="White tee printed with 'À la Turca, avec allure' above a blue Iznik tile panel">
+      </div>
+      <div class="thumbs" role="group" aria-label="Product photos">
+        <button type="button" class="thumb" aria-pressed="true" data-src="/images/a-la-turca.jpg" data-w="1290" data-h="1527" data-alt="White tee printed with 'À la Turca, avec allure' above a blue Iznik tile panel">
+          <img src="/images/a-la-turca.jpg" alt="" width="1290" height="1527"><span>The tee</span>
+        </button>
+        <button type="button" class="thumb" aria-pressed="false" data-src="/images/a-la-turca-detail.jpg" data-w="512" data-h="568" data-alt="Close-up of the print: cobalt and turquoise Iznik tilework from Topkapı Palace">
+          <img src="/images/a-la-turca-detail.jpg" alt="" width="512" height="568"><span>Close-up</span>
+        </button>
+      </div>
+      <p class="caption">The print: Iznik tilework from Topkapı Palace, Istanbul</p>
     </div>
 
     <div class="product-info">
@@ -43,7 +54,7 @@
       </div>
       <!-- Keep this in step with PRICE_PENCE in your environment settings -->
       <p class="price">£20</p>
-      <p class="lede">Cobalt and turquoise tilework, drawn from the Iznik ceramics of Ottoman Istanbul, set beneath a navy serif title on a premium white tee.</p>
+      <p class="lede">Cobalt and turquoise Iznik tilework from Topkapı Palace in Istanbul, home of the Ottoman sultans, set beneath a navy serif title on a premium white tee.</p>
 
       <form id="buy-form" class="buy-form" novalidate>
         <fieldset>
