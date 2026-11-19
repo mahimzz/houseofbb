@@ -58,6 +58,13 @@ legend { font-size: 14px; font-weight: 600; letter-spacing: .08em; margin-bottom
 .size-option input:checked + span { background: var(--navy); color: #fff; border-color: var(--navy); font-weight: 600; }
 .buy { display: flex; flex-direction: column; gap: 10px; max-width: 420px; }
 .buy .btn { width: 100%; }
+.drop-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.drop-badge { display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border: 1px solid var(--navy); border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.drop-badge.is-sold-out { background: var(--navy); color: #fff; }
+.stock-line { margin: 0; font-size: 15px; font-weight: 600; color: #8A2B12; }
+.drop-ends { margin: 0; font-size: 14px; color: var(--text-soft); }
+.btn.is-sold-out { background: #8C93A3; cursor: not-allowed; }
+.form-msg a { color: inherit; text-decoration: underline; }
 .form-msg { margin: 0; font-size: 14px; color: #9B2C2C; min-height: 20px; }
 
 .specs { border-top: 1px solid var(--line); padding-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; font-size: 15px; line-height: 1.5; }

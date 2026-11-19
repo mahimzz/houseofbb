@@ -1,6 +1,7 @@
 // POST /api/checkout  { size: "M" }  ->  { url: "https://checkout.stripe.com/..." }
 // Creates a Stripe Checkout session for the À la Turca tee in the chosen size.
 import Stripe from 'stripe';
+import { DROP, getStock } from './_lib/drop.js';
 
 const SIZES = ['S', 'M', 'L', 'XL', '2XL'];
 
@@ -22,23 +23,39 @@ export async function POST(request) {
     const shipping = parseInt(process.env.SHIPPING_PENCE || '0', 10);
     if (!price) throw new Error('PRICE_PENCE is not set');
 
+    // Limited drop: stop selling once all pieces are sold or the drop has closed.
+    const stock = await getStock();
+    if (stock.ended) {
+      return Response.json({ error: 'drop_ended' }, { status: 409 });
+    }
+    if (stock.soldOut) {
+      return Response.json({ error: 'sold_out' }, { status: 409 });
+    }
+    if (stock.remaining < 1) {
+      return Response.json({ error: 'all_reserved' }, { status: 409 });
+    }
+
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
+      // Hold the tee for 30 minutes (Stripe's minimum), then release it if unpaid.
+      expires_at: Math.floor(Date.now() / 1000) + 30 * 60,
       line_items: [{
         quantity: 1,
-        adjustable_quantity: { enabled: true, minimum: 1, maximum: 10 },
+        adjustable_quantity: stock.remaining > 1
+          ? { enabled: true, minimum: 1, maximum: Math.min(5, stock.remaining) }
+          : { enabled: false },
         price_data: {
           currency: 'gbp',
           unit_amount: price,
           product_data: {
             name: `À la Turca Tee (${size})`,
-            description: 'White premium cotton tee · House of BB',
+            description: `White premium cotton tee · House of BB · Limited to ${DROP.limit}`,
             images: [`${site}/images/a-la-turca.jpg`],
-            metadata: { size },
+            metadata: { size, drop: DROP.id },
           },
         },
       }],
-      metadata: { size },
+      metadata: { size, drop: DROP.id },
       shipping_address_collection: { allowed_countries: ['GB'] },
       shipping_options: [{
         shipping_rate_data: {
